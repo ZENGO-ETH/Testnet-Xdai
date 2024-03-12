@@ -1,0 +1,88 @@
+{
+  "containerDefinitions": [
+      {
+          "name": "faucet-ui",
+          "image": "207935996736.dkr.ecr.us-east-1.amazonaws.com/faucet-ui:master",
+          "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+              "awslogs-group": "faucet-ui-log",
+              "awslogs-region": "us-east-1",
+              "awslogs-stream-prefix": "watch",
+              "awslogs-create-group": "true",
+              "mode": "non-blocking",
+              "max-buffer-size": "2m"
+            },
+            "secretOptions": [
+              {
+                "name": "REACT_APP_RECAPTCHA_SITE_KEY",
+                "valueFrom": "arn:aws:secretsmanager:us-east-1:207935996736:secret:REACT_APP_RECAPTCHA_SITE_KEY"
+              }
+            ]
+          },
+          "cpu": 0,
+          "portMappings": [
+            {
+              "containerPort": 80,
+              "hostPort": 80
+            },
+            {
+              "containerPort": 443,
+              "hostPort": 443
+            },
+            {
+              "containerPort": 8080,
+              "hostPort": 8080
+            }
+          ],
+          "essential": true,
+          "environment": [
+            {
+              "name": "REACT_APP_BACKEND_URL",
+              "value": "https://gnosisfaucet.com/faucet-server/api"
+            },
+            {
+              "name": "REACT_APP_HCAPTCHA_SITE_KEY",
+              "value": "d5def666-d852-4721-ae04-c31c11d5424e"
+            },
+            {
+              "name": "REACT_APP_EXPLORER_URL",
+              "value": "https://gnosisscan.io/tx"
+            },
+            {
+              "name": "REACT_APP_CHIADO_EXPLORE_URL",
+              "value": "https://blockscout.chiadochain.net/tx"
+            },
+            {
+              "name": "REACT_APP_TWEET_TEXT",
+              "value": "Requesting AMOUNT xDai from GnosisFaucet.com so I can start using apps on @gnosischain."
+            },
+            {
+              "name": "REACT_APP_OPTIMISM_EXPLORE_URL",
+              "value": "https://blockscout.com/xdai/optimism/tx"
+            }
+          ],
+          "mountPoints": [],
+          "volumesFrom": [],
+          "linuxParameters": {
+              "initProcessEnabled": true
+            }
+      }
+  ],
+  "family": "faucet-ui-td",
+  "executionRoleArn": "arn:aws:iam::207935996736:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+      "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "3072",
+  "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "GitHub Actions"
+        }
+]
+}

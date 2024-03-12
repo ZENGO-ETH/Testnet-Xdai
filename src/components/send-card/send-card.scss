@@ -1,0 +1,88 @@
+.send-card {
+    &__green-area {
+        background-color: #3e6957;
+        border-color: #6ccd6b;
+        border: 3px solid #133629;
+        border-radius: 20px;
+    }
+
+    &__element {
+        background-color: white !important;
+        border-radius: 5px !important;
+        font-family: "GT-Planar" !important;
+        font-size: 20px !important;
+        font-weight: 500 !important;
+    }
+
+    &__textarea {
+        background-color: white !important;
+        border-radius: 5px !important;
+        font-family: "GT-Planar-Regular" !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        width: 99%;
+    }    
+
+    &__text-button {
+        border: none !important;
+        text-transform: none !important;
+        color: #171717 !important;
+        font-family: "GT-Planar" !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+    }
+
+    &__white-button {
+        background-color: white !important;
+        text-transform: none !important;
+        color: #171717 !important;
+        font-family: "GT-Planar" !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+    }
+
+    &__white-button:hover {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    &__white-button:disabled {
+        color: rgb(230, 228, 228) !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    &__toggle-group {
+        background-color: rgba(191, 220, 208, 0.1) !important;
+    }
+}
+
+.MuiCard-root {
+    background-color: #f0ebde !important;
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+.MuiToggleButton-root {
+    font-family: "GT-Planar-Regular" !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    height: 50px !important;
+    margin: 2px !important;
+    min-width: 166px !important;
+}
+
+.Mui-selected {
+    color: black !important;
+    background-color: white !important;
+    border-color: green !important;
+    border-radius: 5px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .MuiToggleButton-root {
+        min-width: 83px !important;
+    }
+}

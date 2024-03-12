@@ -1,0 +1,37 @@
+.bottombar {
+    &__root {
+        margin-top: 10em;
+        flex-grow: 1;
+        header {
+            box-shadow: none;
+        }
+    }
+
+    &__logo {
+        max-width: 371px;
+        max-height: 39px;
+    }
+
+    &__logo-small {
+        max-width: 200px;
+        max-height: 33px;
+    }
+
+    &__title {
+        flex-grow: 1 !important;
+        text-align: center !important;
+    }
+
+    &__button {
+        font-family: "GT-Planar" !important;
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        text-transform: none !important;
+    }
+
+    &__no-decoration {
+        text-decoration: none;
+        border: none;
+        color: black;
+    }    
+}

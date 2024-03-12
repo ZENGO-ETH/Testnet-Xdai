@@ -1,0 +1,28 @@
+.nx {
+    &__colorful {
+        background: #e76052;
+        // 254.53deg, #7EA1FF 22.17%, #FD7A3F 86.65%
+        background-image: -webkit-linear-gradient(254.53deg, #7EA1FF 22.17%, #FD7A3F 86.65%);
+        background: linear-gradient(254.53deg, #7EA1FF 22.17%, #FD7A3F 86.65%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;        
+        font-weight: bold !important;
+
+        // background-image: -moz-linear-gradient(right, #e76052, #f0b447, #6ed16d, #528cf3);
+        // background-image: -ms-linear-gradient(right, #e76052, #f0b447, #6ed16d, #528cf3);
+        // background-image: -o-linear-gradient(right, #e76052, #f0b447, #6ed16d, #528cf3);
+    }
+
+    &__paragraph {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: 'GT-Planar-Regular';
+
+        &__center {
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;        
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.donate {
+    &__container {
+        margin-top: 4em;
+        background: #171717;
+        border-radius: 20px;
+        color: white;
+    }
+
+    &__content {
+        padding: 1.5em;
+        padding-left: 2em;
+
+        &__wallet-address-container {
+            margin-top: 1.5em;
+            text-align: center;
+            background: #83807a !important;
+            border-radius: 20px;
+            min-height: 77px;
+
+            &__copy-button {
+                background: #171717 !important;
+                border-radius: 20px !important;
+                color: white !important;                                
+                font-family: GT-Planar-Regular !important;
+                &-sm {
+                    margin: 0 auto !important;
+                }
+                &-lg {
+                    margin-left: 2em !important;
+                }
+            }
+        }
+    }
+}
